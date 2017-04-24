@@ -2,7 +2,7 @@
  * Created by sarcoma on 24/04/17.
  */
 
-var sprayFadeStraight = function () {
+var sprayFadeSide = function () {
 
         var audioSource = new AudioSource('player'),
             canvas = document.getElementById('canvas'),
@@ -19,12 +19,12 @@ var sprayFadeStraight = function () {
             context.fillRect(0, 0, width, height);
 
             var i = 1;
-            if (spacer % 4 == 0) {
-                for (bin = 0; bin < audioSource.streamData.length; bin += 6) {
+            if (spacer % 8 == 0) {
+                for (bin = 0; bin < audioSource.streamData.length; bin += 5) {
                     var val = audioSource.streamData[bin];
-                    var velocity = val / 255 * 24;
-                    var radius = 30;
-                    particles.push(particle.create(i * width / 23, height-radius/2, velocity, Math.PI * 1.50, 0.1, radius, 0.01));
+                    var velocity = val / 255 * 26;
+                    var radius = 15;
+                    particles.push(particle.create(-radius, height - (i * height / 24.5) + radius, velocity, Math.PI * 2, 0, radius, 0.006));
                     i++;
                 }
             }
@@ -60,5 +60,4 @@ var sprayFadeStraight = function () {
 
         audioSource.playStream('mp3/Rodrigo_Y_Gabriela_-_Hanuman_Live__KEXP.mp3');
         update();
-
     };

@@ -1,4 +1,6 @@
+
 // sprayFade();
-sprayFadeStraight();
-// dotBars();
+// sprayFadeStraight();
+// sprayFadeSide();
+dotBars();
 // dotCloud();

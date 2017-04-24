@@ -38,7 +38,7 @@ var dotCloud = function () {
                 context.fill();
             }
 
-            removeDeadParticles();
+            removeDeadParticles(particles, width, height);
 
             requestAnimationFrame(update);
         };
@@ -46,12 +46,4 @@ var dotCloud = function () {
         audioSource.playStream('mp3/Rodrigo_Y_Gabriela_-_Hanuman_Live__KEXP.mp3');
         update();
 
-        function removeDeadParticles() {
-            for (var i = particles.length - 1; i >= 0; i -= 1) {
-                var p = particles[i];
-                if (p.position.getX() < 0) {
-                    particles.splice(i, 1);
-                }
-            }
-        }
     };
