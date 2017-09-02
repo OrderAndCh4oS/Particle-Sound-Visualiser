@@ -15,11 +15,11 @@ var dotBars = function () {
         var update = function () {
             console.log(particles.length);
             context.clearRect(0, 0, width, height);
-            context.fillStyle = "#164450";
+            context.fillStyle = "#ffd700";
             context.fillRect(0, 0, width, height);
 
             var i = 1;
-            if (spacer % 4 == 0) {
+            if (spacer % 4 === 0) {
                 for (bin = 0; bin < audioSource.streamData.length; bin += 10) {
                     var val = audioSource.streamData[bin];
                     var velocity = 10;
@@ -34,7 +34,7 @@ var dotBars = function () {
                 p = particles[j];
                 p.update();
 
-                context.fillStyle = "rgba(0, 212, 85, 1)";
+                context.fillStyle = "rgba(0, 0, 0, 1)";
                 context.beginPath();
                 context.arc(p.position.getX(), p.position.getY(), p.getRadius(), 0, Math.PI * 2, false);
                 context.fill();
@@ -49,3 +49,5 @@ var dotBars = function () {
         update();
 
     };
+
+dotBars();

@@ -1,31 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
+<!--
+         ##############################################################################
+
+
+                                                    .,:;:,
+                                                 ,;;:,,:ror.
+                                              .:;,.     .ro:
+                                             :;.         ;r.
+           r&SAS&r          rSSCCOd.       ,rSSSCC&r.   ,r.   ;SSSSSS.        rSSSCOe,
+          &HH;,rHH&         OHS  HHe      :r,AHC,;CHS. :;.    rHHc            dHH  AHS
+         .HHC   CHH.        OHHSAHS:     :o. AH&  rHHr;,      rHHAAAA         dHHSSHAr
+          &HH;,rHH&         OHS;CHC.    ,o,  AHC,:CHA;.       rHHo            dHH;eHA,
+           r&SAS&r          rS&  CSe    rr   CSSSCO&,      .  ;SSSSSS:        rSS, rSO.
+                                       .oo&d     ,;.     .;;
+                                      .odo;     ::  ,,  ::,
+                              ..     :SS;oo:  .;, .OHH&;.       .                  ,:re&OASo
+                        ,;d&CHHHO, .&He. ,roodr.  ,HAr:       .,:    .,::.   .:rerer;,.  ,rr
+                   .;dOHHAHHHHHHHr:SS;  .dO:rooo;:;Odr,   .,:;ooo;o&SHHHHHrrro;,
+               ,reCA&o;,  ,SHHHHHHHr.  ;So :;..,;dooooooooor;d&CAS&drOHA&e;
+            ,;OHSd:         .,,:SHr  .&C, :;  .dOOHASSSC;.:eSHCo,   oHHC: .d;.
+          ;AHHHe.           :AHHC,  ;A&. :;  rC&SHHCoo;,,rHAd,       ;rAHSr&HH:
+         ;AHSd,             .AHHC;.dA;  ,; ,OOOHHH;    dHHr.            .:dOHHArr,
+       .&HS;                eH&OHHHHd. .r.dS&rOHHO   .OHHo               . ;HeorSHAOr.
+      .CHC.               .&Ho  eHAAHHOrdOOOC.AHHo  .&HHr,,,,.           .dA;    ,dAHAr
+      eHH:               .CH;  dHO..;reorOACodHHHS&rOHHHCderCHA&.       ;S&.       .AHA.
+     .HHH;              ,SA:.,rHSr;odd&OS&d;:&HHS.   SHHS,   ..      .;Oe,         ;HC:
+      OHHAd:.      .,,:;SA&oeHHo  oAHHS;     eHH&    ,SHH&,       .:r&;.       .:d&o:
+       ;&AHHHSCSSSCOerOHC. .OHo   .rHe.e:   .AHHd     .rOHHAACddrre;.     .,;oor:,
+          .,,,,..    oHS.  &He   ;SCo       ;HHH,         ,::,,.    :oddor;:.
+                    ;e;.  rHS. ,&O:        rAHHH;              rOd  ..
+                         :Se:;&r:      .r,dHHHHHC              ,;:
+                                           ,,,,Co             d:
+                                               ..
+           ,,,       ,,,        ,,.        ,        ,,,,       ,       ., ,,      ,,,,
+          :          ::;        ;,.       :.;        :         r        ; ,       :,,
+          ;,,.       : :        :,.       : ,        ,         :        ,:        ,.,.
+
+
+
+         ##############################################################################
+ -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <style>
-        body, html {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-    </style>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Coding Math Stuff</title>
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.8.0/css/tachyons.min.css"/>
+    
 </head>
-<body>
-<canvas id="canvas"></canvas>
-<audio id="player"></audio>
-<script src="js/vector.js"></script>
-<script src="js/particle.js"></script>
-<script src="js/remove-dead-particals.js"></script>
-<script src="js/audio-source.js"></script>
-<script src="js/dotBars.js"></script>
-<script src="js/dotBarsFixed.js"></script>
-<script src="js/dotCloud.js"></script>
-<script src="js/sprayFade.js"></script>
-<script src="js/sprayFadeSide.js"></script>
-<script src="js/sprayFadeStraight.js"></script>
-<script src="js/main.js"></script>
+<body class="bg-yellow">
+<div class="mw9 center ph3-ns">
+    <div class="fl w-100 pa4">
+        <div class="bg-yellow pv4">
+            <h1 class="f-headline lh-solid">JS Sound Visualiser Experiments</h1>
+            <p class="f3 lh-copy">Here are a collection of JS scratchpad scripts that animate particles to an audio source.</p>
+            <p class="f3 lh-copy">
+                <a href="https://github.com/sarcoma/Particle-Sound-Visualiser" class="db black link hover-blue">View on
+                    GitHub</a>
+            </p>
+        </div>
+    </div>
+    <div class="fl w-50 ph4">
+        <ul class="list pl0 measure">
+            <li class="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
+                <a class="f4 fw6 db black link hover-blue" href="dot-bars.html">Dot Bars</a>
+            </li>
+            <li class="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
+                <a class="f4 fw6 db black link hover-blue" href="dot-bars-fixed.html">Dot Bars Fixed</a>
+            </li>
+            <li class="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
+                <a class="f4 fw6 db black link hover-blue" href="dot-cloud.html">Dot Cloud</a>
+            </li>
+        </ul>
+    </div>
+    <div class="fl w-50 ph4">
+        <ul class="list pl0 measure">
+            <li class="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
+                <a class="f4 fw6 db black link hover-blue" href="spray-fade.html">Spray Fade</a>
+            </li>
+            <li class="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
+                <a class="f4 fw6 db black link hover-blue" href="spray-fade-side.html">Spray Fade Side</a>
+            </li>
+            <li class="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
+                <a class="f4 fw6 db black link hover-blue" href="spray-fade-straight.html">Spray Fade Straight</a>
+            </li>
+        </ul>
+    </div>
+    <div class="fl w-100 pa4">
+        <p><a class="f3 black-70 dib pr3 mb3" href="https://orderandchaoscreative.com">Order & Chaos Creative 2017</a></p>
+    </div>
+</div>
 </body>
 </html>
